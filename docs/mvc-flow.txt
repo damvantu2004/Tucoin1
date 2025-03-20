@@ -1,0 +1,12 @@
+1. User Action Flow:
+   User -> View (click "Bắt đầu đào")
+   View -> Controller (gọi start_mining())
+   Controller -> Model (tạo block mới)
+   Model -> View (cập nhật UI với block mới)
+
+2. Data Update Flow:
+   Model (blockchain mới) -> Controller
+   Controller -> View (cập nhật hiển thị)
+   View -> User (hiển thị thông tin mới)
+
+   

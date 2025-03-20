@@ -1,0 +1,9 @@
+1. P2P Flow:
+   Node A --[New Block]--> Broadcast ---> All Nodes
+   Node B --[New Transaction]--> Broadcast ---> All Nodes
+   Node C --[Chain Request]--> Node D --[Chain Response]--> Node C
+
+2. MVC Flow:
+   User --[Action]--> View --[Request]--> Controller
+   Controller --[Update]--> Model --[Notify]--> View
+   View --[Display]--> User

@@ -1,0 +1,6 @@
+tkinter
+hashlib
+json
+socket
+threading
+datetime

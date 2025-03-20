@@ -1,0 +1,50 @@
+[Node 1]                    [Node 2]                    [Node 3]
++----------------+          +----------------+          +----------------+
+|    GUI (MVC)   |          |    GUI (MVC)   |          |    GUI (MVC)   |
+|  +----------+  |          |  +----------+  |          |  +----------+  |
+|  |   View   |  |          |  |   View   |  |          |  |   View   |  |
+|  +----------+  |          |  +----------+  |          |  +----------+  |
+|  |Controller|  |          |  |Controller|  |          |  |Controller|  |
+|  +----------+  |          |  +----------+  |          |  +----------+  |
+|  |  Model   |  |          |  |  Model   |  |          |  |  Model   |  |
+|  +----------+  |          |  +----------+  |          |  +----------+  |
+|                |          |                |          |                |
+|  P2P Network   |<-------->|  P2P Network   |<-------->|  P2P Network   |
++----------------+          +----------------+          +----------------+
+
+Detailed Components:
++------------------------+
+|         View           |
+| - ui/main_window.py   |
+| - ui/mining_tab.py    |
+| - ui/wallet_tab.py    |
+| - ui/network_tab.py   |
++------------------------+
+
++------------------------+
+|      Controller        |
+| (Embedded in View)     |
+| - Mining controls      |
+| - Wallet controls     |
+| - Network controls    |
++------------------------+
+
++------------------------+
+|         Model          |
+| - src/blockchain.py   |
+| - src/wallet.py       |
+| - src/transaction.py  |
+| - src/consensus/*.py  |
++------------------------+
+
+Data Flow:
+View <-> Controller <-> Model <-> P2P Network
+(UI)     (Logic)      (Data)     (Communication)
+
+Storage:
++------------------------+
+|      Data Files        |
+| - data/blockchain.json |
+| - data/wallet.json     |
++------------------------+
+
